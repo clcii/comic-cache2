@@ -1,0 +1,21 @@
+<div fxLayout="column" fxFill>
+<mat-toolbar color="primary">
+  <button (click)="toggleNav()" mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+
+    <div fxFlex fxLayoutAlign="center">Delivery Check List</div>
+</mat-toolbar>
+<mat-sidenav-container style="background-color: blue;" fxFlex>
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/">
+          <mat-icon>home</mat-icon>Home
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+</div>
