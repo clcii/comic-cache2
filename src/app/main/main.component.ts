@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -8,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
 
   NavOpened = false;
-  constructor() { }
+  constructor(private router: Router) {
+
+    this.router.events.subscribe(event=>{
+      // this.NavOpened = false;
+    })
+   }
 
   ngOnInit(): void {
   }

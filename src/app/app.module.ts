@@ -9,17 +9,32 @@ import { environment } from '../environments/environment';
 import { MainComponent } from './main/main.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
+// import { MatMomentDateModule } from "@angular/material-moment-adapter";
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
+// import { MatDatepickerModule } from "@angular/material/datepicker";
+
+
+import { SwitchboardComponent } from './switchboard/switchboard.component';
+import { DeliveryComponent } from './delivery/delivery.component';
+import { SeniorsComponent } from './seniors/seniors.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    SwitchboardComponent,
+    DeliveryComponent,
+    SeniorsComponent,
+    CalendarComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +52,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatSlideToggleModule,
     MatSidenavModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatGridListModule,
+    //MatDatepickerModule,
+    //MatMomentDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

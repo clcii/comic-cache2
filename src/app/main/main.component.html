@@ -3,14 +3,49 @@
   <button (click)="toggleNav()" mat-icon-button>
     <mat-icon>menu</mat-icon>
   </button>
-
-    <div fxFlex fxLayoutAlign="center">Delivery Check List</div>
+   <div fxFlex fxLayoutAlign="center">Delivery Check List</div>
+   <button mat-icon-button><mat-icon>more_vert</mat-icon></button>
 </mat-toolbar>
-<mat-sidenav-container style="background-color: blue;" fxFlex>
-  <mat-sidenav mode="side" opened>
+<mat-sidenav-container fxFlex>
+  <mat-sidenav (click)="toggleNav()" mode="push" [opened]="NavOpened">
     <mat-nav-list>
       <a mat-list-item routerLink="/">
-          <mat-icon>home</mat-icon>Home
+        <button mat-icon-button>
+          <mat-icon>home</mat-icon>
+        </button>
+        Home
+      </a>
+    </mat-nav-list>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/delivery">
+        <button mat-icon-button>
+          <mat-icon>airport_shuttle</mat-icon>
+        </button>
+        Delivery
+      </a>
+    </mat-nav-list>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/seniors">
+        <button mat-icon-button>
+          <mat-icon>people</mat-icon>
+        </button>
+        Seniors
+      </a>
+    </mat-nav-list>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/calendar">
+        <button mat-icon-button>
+          <mat-icon>calendar_today</mat-icon>
+        </button>
+        Calendar
+      </a>
+    </mat-nav-list>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/settings">
+        <button mat-icon-button>
+          <mat-icon>settings</mat-icon>
+        </button>
+        Settings
       </a>
     </mat-nav-list>
   </mat-sidenav>
