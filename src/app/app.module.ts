@@ -17,14 +17,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
-// import { MatDatepickerModule } from "@angular/material/datepicker";
-
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatMomentDateModule } from "@angular/material-moment-adapter";
 
 import { SwitchboardComponent } from './switchboard/switchboard.component';
 import { DeliveryComponent } from './delivery/delivery.component';
 import { SeniorsComponent } from './seniors/seniors.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { SettingsComponent } from './settings/settings.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { SettingsComponent } from './settings/settings.component';
       registrationStrategy: 'registerWhenStable:30000'
     }),
     FlexLayoutModule,
+    DragDropModule,
     MatToolbarModule,
     MatIconModule,
     MatSlideToggleModule,
@@ -54,8 +56,8 @@ import { SettingsComponent } from './settings/settings.component';
     MatListModule,
     MatButtonModule,
     MatGridListModule,
-    //MatDatepickerModule,
-    //MatMomentDateModule
+    MatDatepickerModule,
+    MatMomentDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

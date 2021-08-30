@@ -1,1 +1,3 @@
-<p>delivery works!</p>
+<mat-selection-list class="senior-list"  cdkDropList (cdkDropListDropped)="drop($event)">
+  <mat-list-option class="item-box"   cdkDrag *ngFor = "let item of sampleItems" >{{item}}</mat-list-option>
+</mat-selection-list>
